@@ -552,6 +552,20 @@ public class WebexServiceImpl implements WebexService {
 		return licencia;
 	}
 	
+    @Override
+    public OperadoresBean verificaNuevoOperador(String sLogin) throws Exception {
+    	OperadoresBean objSalida = null;
+    	objSalida = webexTokenDao.obtenerOperador(sLogin);
+    	return objSalida;
+    }
+    
+    @Override
+    public OperadoresBean getOperador(String sLogin) {
+    	OperadoresBean objSalida = null;
+    	objSalida = licenciaDao.getOperador(sLogin);
+        return objSalida;
+    }
+	
 	 /*
     @Override
     public ResponseDTO<List<WebexOperadorResponseDTO>> getOperador() {

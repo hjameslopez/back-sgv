@@ -38,6 +38,18 @@ public class LicenciaDaoImpl implements LicenciaDao {
     }
     
     @Override
+    public OperadoresBean getOperador (String sLogin) {
+        String sql = "SELECT o.nIdOperador, o.sLogin, o.dFecCreado, o.bActivo, u.snombre FROM [dbo].[SimVidOperador] o left join  simusuario u on o.SlOGIN = u.SLOGIN where o.sLogin = ?";
+        OperadoresBean OperadorBean = null;
+        try {
+            OperadorBean = this.jdbcTemplate.queryForObject(sql, new Object[]{sLogin}, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
+
+        } catch (EmptyResultDataAccessException e) {
+        }
+        return OperadorBean;
+    }
+    
+    @Override
     public List<OperadoresBean> listOperadores() {
         
         String sql = "SELECT o.nIdOperador, o.sLogin, o.dFecCreado, o.bActivo, u.snombre FROM [dbo].[SimVidOperador] o left join  simusuario u on o.SlOGIN = u.SLOGIN";

@@ -9,5 +9,6 @@ public interface LicenciaDao {
     LicenciaBean getLicencia (String sLogin);
     public List<LicenciaBean> listLicencias();
     public List<OperadoresBean> listOperadores();
+    public OperadoresBean getOperador (String sLogin);
 
 }

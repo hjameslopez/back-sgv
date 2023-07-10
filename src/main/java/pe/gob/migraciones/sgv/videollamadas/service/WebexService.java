@@ -42,6 +42,10 @@ public interface WebexService {
     public String extraerEstado(Integer nIdSimVideCola)throws Exception;
 
 	public LicenciaBean licenciaAsignada(Authentication authentication);
+	
+	public OperadoresBean verificaNuevoOperador(String sLogin) throws Exception;
+	
+	public OperadoresBean getOperador(String sLogin);
 
 	
 }

@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import pe.gob.migraciones.sgv.videollamadas.bean.LicenciaBean;
+import pe.gob.migraciones.sgv.videollamadas.bean.OperadoresBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.SesionWebBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexAtencionBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexCorrelativoBean;
@@ -47,4 +48,5 @@ public interface WebexTokenDao {
     public WebexAtencionBean asignaOperador(String correo, Integer nIdSimVideCola) throws SQLException;
     public String obtenerLicencia(Integer nIdOperador);
 	public LicenciaBean licenciaAsignada(Integer idUsuario);
+	public OperadoresBean obtenerOperador(String sLogin);
 }

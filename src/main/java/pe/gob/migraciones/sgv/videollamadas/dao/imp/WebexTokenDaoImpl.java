@@ -17,6 +17,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import pe.gob.migraciones.sgv.videollamadas.bean.LicenciaBean;
+import pe.gob.migraciones.sgv.videollamadas.bean.OperadoresBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.SesionWebBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexAtencionBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexCorrelativoBean;
@@ -554,6 +555,21 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         		+ "			and opr.bActivo='1'";
         try {
             salida = this.jdbcTemplate.queryForObject(sql, new Object[]{idUsuario}, BeanPropertyRowMapper.newInstance(LicenciaBean.class));
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+            return null;
+        }
+        return salida;
+	}
+	
+	@Override
+	public OperadoresBean obtenerOperador(String sLogin) {
+		OperadoresBean salida = null;
+        String sql = "SELECT nIdOperador, sLogin, dFecCreado, bActivo\r\n"
+        		+ "      from SimVidOperador \r\n"
+        		+ "      WHERE bActivo='1'";
+        try {
+            salida = this.jdbcTemplate.queryForObject(sql, new Object[]{sLogin}, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
         } catch (Exception e) {
             System.out.print(e.getMessage());
             return null;

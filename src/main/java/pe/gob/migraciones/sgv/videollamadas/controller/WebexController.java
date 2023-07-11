@@ -268,4 +268,31 @@ public class WebexController {
         }
         return ResponseEntity.ok(salida);
     }
+    @ApiOperation(value = "Verifica el nuevo operador por sLogin")
+    @GetMapping(value = "verificaNuevoOperador", produces = MediaType.APPLICATION_JSON_VALUE)
+    public  ResponseEntity<Map<String, Object>> verificaNuevoOperador(@RequestParam(name = "sLogin") String sLogin) throws Exception {
+        Map<String, Object> salida = new HashMap<>();
+        try {
+            OperadoresBean objSalida = webexService.verificaNuevoOperador(sLogin);
+            if (objSalida == null) {
+            	objSalida = webexService.getOperador(sLogin);
+            	if(objSalida == null) {
+            		salida.put("mensaje", "Ingrese un usuario válido");
+                    salida.put("operador",objSalida);
+            	}
+            	else {
+            		salida.put("mensaje", "Verificado");
+                    salida.put("operador",objSalida);
+            	}
+            } else {
+                salida.put("mensaje", "El operador: "+objSalida.getsNombre()+" ya se encuentra registrado");
+                salida.put("operador",objSalida);
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+            logger.error("Error -> "+e);
+            salida.put("mensaje", "No se pudo verificar el operador");
+        }
+        return ResponseEntity.ok(salida);
+    }
 }

@@ -1,0 +1,195 @@
+2023-07-11 09:08:16.150 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 2328 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 09:08:16.154 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 09:08:25.197 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:08:25.198 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 09:08:25.199 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 09:08:27.875 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 09:08:30.509 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 09:08:31.361 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 09:08:31.440 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 09:08:31.552 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 09:08:31.578 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:08:32.358 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 18.734 seconds (JVM running for 52.155)
+2023-07-11 09:09:10.178 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 09:09:11.321 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 09:09:11.897 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 09:23:10.208 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 19676 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 09:23:10.211 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 09:23:12.117 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:23:12.117 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 09:23:12.117 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 09:23:12.295 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 09:23:12.877 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 09:23:13.290 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 09:23:13.343 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 09:23:13.366 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 09:23:13.381 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:23:13.458 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 3.516 seconds (JVM running for 5.435)
+2023-07-11 09:23:32.402 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 09:24:01.115 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 09:24:01.317 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 09:56:20.253 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 10976 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 09:56:20.255 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 09:56:23.385 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:56:23.385 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 09:56:23.386 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 09:56:23.493 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 09:56:24.288 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 09:56:24.622 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 09:56:24.644 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 09:56:24.665 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 09:56:24.679 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:56:24.724 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 4.731 seconds (JVM running for 5.98)
+2023-07-11 09:57:09.499 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 8152 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 09:57:09.502 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 09:57:10.619 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:57:10.619 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 09:57:10.620 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 09:57:10.713 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 09:57:11.188 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 09:57:11.521 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 09:57:11.537 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 09:57:11.557 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 09:57:11.573 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:57:11.637 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.421 seconds (JVM running for 3.154)
+2023-07-11 09:57:44.709 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 09:57:44.905 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 09:57:45.135 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 09:59:52.346 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 15512 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 09:59:52.349 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 09:59:53.513 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:59:53.514 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 09:59:53.514 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 09:59:53.601 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 09:59:54.108 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 09:59:54.501 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 09:59:54.517 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 09:59:54.536 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 09:59:54.550 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 09:59:54.599 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.508 seconds (JVM running for 3.284)
+2023-07-11 10:00:13.298 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:00:22.907 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:00:23.158 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:03:24.203 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 16904 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:03:24.205 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:03:25.837 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:03:25.838 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:03:25.839 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:03:26.205 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:03:26.690 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:03:27.020 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:03:27.036 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:03:27.055 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:03:27.067 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:03:27.106 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 3.169 seconds (JVM running for 3.881)
+2023-07-11 10:04:10.838 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:04:11.027 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:04:11.277 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:04:11.372 [ERROR] [http-nio-8080-exec-2] [pe.gob.migraciones.sgv.videollamadas.controller.WebexController:293] Error -> org.springframework.dao.TransientDataAccessResourceException: PreparedStatementCallback; SQL [SELECT TOP 1 NULL AS 'nIdOperador', sLogin, 1 AS 'bActivo',  sNombre, dFechaHoraAud AS 'dFecCreado'
+		FROM simusuario WHERE sLogin = 'mbravov'
+		ORDER BY dFechaHoraAud DESC]; El índice 1 está fuera de intervalo.; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: El índice 1 está fuera de intervalo.
+2023-07-11 10:05:40.451 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 21752 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:05:40.454 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:05:41.625 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:05:41.625 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:05:41.625 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:05:41.766 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:05:42.233 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:05:42.563 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:05:42.578 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:05:42.596 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:05:42.608 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:05:42.648 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.464 seconds (JVM running for 3.196)
+2023-07-11 10:05:45.833 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:06:01.379 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:06:01.609 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:07:49.865 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 7304 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:07:49.867 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:07:51.581 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:07:51.581 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:07:51.582 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:07:51.705 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:07:52.185 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:07:52.525 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:07:52.542 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:07:52.560 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:07:52.575 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:07:52.667 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 3.059 seconds (JVM running for 3.778)
+2023-07-11 10:07:53.410 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:07:53.617 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:07:53.847 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:15:41.028 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 6760 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:15:41.030 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:15:42.242 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:15:42.243 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:15:42.244 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:15:42.328 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:15:42.808 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:15:43.144 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:15:43.158 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:15:43.175 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:15:43.187 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:15:43.241 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.491 seconds (JVM running for 3.207)
+2023-07-11 10:15:50.855 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:16:04.117 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:16:04.325 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:19:29.863 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 22148 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:19:29.865 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:19:31.058 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:19:31.059 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:19:31.059 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:19:31.176 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:19:31.667 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:19:32.019 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:19:32.035 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:19:32.054 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:19:32.066 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:19:32.105 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.505 seconds (JVM running for 3.233)
+2023-07-11 10:19:46.501 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:19:46.707 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:19:46.941 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:22:43.157 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 17260 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:22:43.160 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:22:45.637 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:22:45.638 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:22:45.639 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:22:45.939 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:22:46.407 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:22:46.753 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:22:46.768 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:22:46.786 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:22:46.797 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:22:47.648 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 4.778 seconds (JVM running for 5.527)
+2023-07-11 10:22:53.319 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:22:53.501 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:22:53.720 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:23:16.352 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 17612 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:23:16.354 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:23:17.451 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:23:17.451 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:23:17.451 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:23:17.548 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:23:18.010 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:23:18.350 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:23:18.366 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:23:18.385 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:23:18.397 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:23:18.438 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.336 seconds (JVM running for 3.071)
+2023-07-11 10:23:22.902 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:23:23.093 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:23:23.316 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2023-07-11 10:24:06.611 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 8972 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 10:24:06.613 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 10:24:07.740 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:24:07.741 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 10:24:07.741 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 10:24:07.866 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 10:24:08.344 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 10:24:08.691 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 10:24:08.706 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 10:24:08.726 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 10:24:08.737 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 10:24:08.775 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.425 seconds (JVM running for 3.2)
+2023-07-11 10:24:19.073 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:24:19.262 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:24:19.478 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.

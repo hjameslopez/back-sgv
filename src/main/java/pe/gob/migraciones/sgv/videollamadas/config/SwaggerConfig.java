@@ -20,7 +20,7 @@ public class SwaggerConfig {
     public Docket defApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("pe.gob.migraciones.videollamadas"))
+                .apis(RequestHandlerSelectors.basePackage("pe.gob.migraciones.sgv.videollamadas"))
                 //.paths(regex("/grupo.*"))
                 .build()
                 .apiInfo(metaData());

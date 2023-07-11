@@ -191,3 +191,5 @@
 2023-07-11 10:24:08.737 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
 2023-07-11 10:24:08.775 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 2.425 seconds (JVM running for 3.2)
 2023-07-11 10:24:19.073 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 10:24:19.262 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 10:24:19.478 [INFO] [http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.

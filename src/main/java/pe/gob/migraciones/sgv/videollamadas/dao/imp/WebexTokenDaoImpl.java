@@ -565,9 +565,11 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
 	@Override
 	public OperadoresBean obtenerOperador(String sLogin) {
 		OperadoresBean salida = null;
-        String sql = "SELECT nIdOperador, sLogin, dFecCreado, bActivo\r\n"
-        		+ "      from SimVidOperador \r\n"
-        		+ "      WHERE bActivo='1'";
+        String sql = "SELECT top 1 o.nIdOperador, o.sLogin, o.dFecCreado, o.bActivo, u.dFechaHoraAud, u.sNombre\r\n"
+        		+ "	from SimVidOperador o RIGHT JOIN SimUsuario u\r\n"
+        		+ "	ON o.sLogin = u.sLogin\r\n"
+        		+ "	WHERE bActivo='1'AND o.sLogin = ?\r\n"
+        		+ "	ORDER BY o.dFecCreado DESC";
         try {
             salida = this.jdbcTemplate.queryForObject(sql, new Object[]{sLogin}, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
         } catch (Exception e) {

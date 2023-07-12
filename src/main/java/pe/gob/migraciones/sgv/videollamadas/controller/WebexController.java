@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -13,9 +14,11 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import pe.gob.migraciones.sgv.videollamadas.util.Constantes;
 import pe.gob.migraciones.sgv.videollamadas.bean.LicenciaBean;
+import pe.gob.migraciones.sgv.videollamadas.bean.OperadorBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.OperadoresBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexAtencionBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexSimVideColaBean;
+import pe.gob.migraciones.sgv.videollamadas.dto.ResponseDTO;
 import pe.gob.migraciones.sgv.videollamadas.service.WebexService;
 
 import java.util.HashMap;
@@ -299,4 +302,24 @@ public class WebexController {
         }
         return ResponseEntity.ok(salida);
     }
+    
+    @PostMapping(value = "/registrar-operador", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ResponseDTO<Boolean>> registrarOperador(@RequestBody OperadoresBean operadoresBean) {
+        try {
+            if (operadoresBean == null) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+            return new ResponseEntity<>(webexService.notificarRegistrarOperador(operadoresBean), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    
+    
+    
+    
+    
+    
+    
 }

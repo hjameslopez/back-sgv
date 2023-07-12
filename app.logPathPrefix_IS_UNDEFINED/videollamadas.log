@@ -1,0 +1,15 @@
+2023-07-11 16:58:04.696 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:55] Starting VideollamadasApplication on OTICUDS0098 with PID 10424 (C:\Users\hlopez\Documents\Github\Backend\back-sgv\target\classes started by hlopez in C:\Users\hlopez\Documents\Github\Backend\back-sgv)
+2023-07-11 16:58:04.698 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:651] No active profile set, falling back to default profiles: default
+2023-07-11 16:58:06.367 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-11 16:58:06.369 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2023-07-11 16:58:06.369 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2023-07-11 16:58:06.509 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring embedded WebApplicationContext
+2023-07-11 16:58:07.130 [INFO] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-07-11 16:58:07.468 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:151] Context refreshed
+2023-07-11 16:58:07.484 [INFO] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:154] Found 1 custom documentation plugin(s)
+2023-07-11 16:58:07.503 [INFO] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41] Scanning for api listing references
+2023-07-11 16:58:07.647 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-07-11 16:58:08.446 [INFO] [main] [pe.gob.migraciones.sgv.videollamadas.VideollamadasApplication:61] Started VideollamadasApplication in 4.023 seconds (JVM running for 4.913)
+2023-07-11 16:58:26.994 [INFO] [http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/back-sgv]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 16:58:41.620 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2023-07-11 16:58:41.977 [INFO] [http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.

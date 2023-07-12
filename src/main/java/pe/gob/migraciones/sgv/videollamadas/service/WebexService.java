@@ -46,6 +46,8 @@ public interface WebexService {
 	public OperadoresBean verificaNuevoOperador(String sLogin) throws Exception;
 	
 	public OperadoresBean getOperador(String sLogin);
+	
+	public ResponseDTO<Boolean> notificarRegistrarOperador(OperadoresBean operadoresBean);
 
 	
 }

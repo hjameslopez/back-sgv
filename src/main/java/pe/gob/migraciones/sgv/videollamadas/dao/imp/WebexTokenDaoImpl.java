@@ -29,7 +29,9 @@ import pe.gob.migraciones.sgv.videollamadas.bean.WebexSimVideColaBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexTokenBean;
 import pe.gob.migraciones.sgv.videollamadas.dao.WebexTokenDao;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Types;
 import java.util.HashMap;
 import java.util.List;
@@ -585,12 +587,19 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
 	@Override
 	public Integer registrarOperador(String sLogin) {
 	    String query = "INSERT INTO SimVidOperador (sLogin, bLicAsignada) VALUES (?, 0)";
-	    PreparedStatementCreatorFactory pscFactory = new PreparedStatementCreatorFactory(query);
-	    pscFactory.setReturnGeneratedKeys(true);
-	    PreparedStatementCreator psc = pscFactory.newPreparedStatementCreator(new Object[]{sLogin});
+
+	    // Crear un GeneratedKeyHolder para almacenar la clave generada
 	    KeyHolder keyHolder = new GeneratedKeyHolder();
-	    jdbcTemplate.update(psc, keyHolder);
+
+	    jdbcTemplate.update(con -> {
+	        PreparedStatement ps = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+	        ps.setString(1, sLogin);
+	        return ps;
+	    }, keyHolder);
+
+	    // Obtener la clave generada
 	    int generatedKey = keyHolder.getKey().intValue();
+
 	    return generatedKey;
 	}
 	

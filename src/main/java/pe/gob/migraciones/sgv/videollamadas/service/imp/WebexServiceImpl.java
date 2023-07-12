@@ -568,8 +568,8 @@ public class WebexServiceImpl implements WebexService {
     
     @Override
     public ResponseDTO<Integer> notificarRegistrarOperador(OperadoresBean operadoresBean) {
-        webexTokenDao.registrarOperador(operadoresBean.getsLogin());
-        return Utilitario.getInstancia().responseOK(operadoresBean.getnIdOperador());
+        int generatedKey = webexTokenDao.registrarOperador(operadoresBean.getsLogin());
+        return Utilitario.getInstancia().responseOK(generatedKey);
     }
     
     @Override

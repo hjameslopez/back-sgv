@@ -47,7 +47,9 @@ public interface WebexService {
 	
 	public OperadoresBean getOperador(String sLogin);
 	
-	public ResponseDTO<Boolean> notificarRegistrarOperador(OperadoresBean operadoresBean);
+	public ResponseDTO<Integer> notificarRegistrarOperador(OperadoresBean operadoresBean);
+	
+	public List<OperadoresBean> listaCbxOperadores();
 
 	
 }

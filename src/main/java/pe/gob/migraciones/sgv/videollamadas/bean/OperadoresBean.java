@@ -11,9 +11,22 @@ public class OperadoresBean {
     private LocalDateTime dFechaHoraAud;
     private LocalDateTime dFecCreado;
     private String bActivo;
+    private String bLicAsignada;
     
 	public OperadoresBean() {
 		super();
+	}
+
+	public OperadoresBean(Integer nIdOperador, String sLogin, String sNombre, LocalDateTime dFechaHoraAud,
+			LocalDateTime dFecCreado, String bActivo, String bLicAsignada) {
+		super();
+		this.nIdOperador = nIdOperador;
+		this.sLogin = sLogin;
+		this.sNombre = sNombre;
+		this.dFechaHoraAud = dFechaHoraAud;
+		this.dFecCreado = dFecCreado;
+		this.bActivo = bActivo;
+		this.bLicAsignada = bLicAsignada;
 	}
 
 	public Integer getnIdOperador() {
@@ -64,19 +77,15 @@ public class OperadoresBean {
 		this.bActivo = bActivo;
 	}
 
-	public OperadoresBean(Integer nIdOperador, String sLogin, String sNombre, LocalDateTime dFechaHoraAud,
-			LocalDateTime dFecCreado, String bActivo) {
-		super();
-		this.nIdOperador = nIdOperador;
-		this.sLogin = sLogin;
-		this.sNombre = sNombre;
-		this.dFechaHoraAud = dFechaHoraAud;
-		this.dFecCreado = dFecCreado;
-		this.bActivo = bActivo;
+	public String getbLicAsignada() {
+		return bLicAsignada;
 	}
-	
-	
-    
+
+	public void setbLicAsignada(String bLicAsignada) {
+		this.bLicAsignada = bLicAsignada;
+	}
+
+	 
     
 	
 

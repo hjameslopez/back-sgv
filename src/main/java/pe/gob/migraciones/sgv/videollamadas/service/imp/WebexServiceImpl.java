@@ -567,9 +567,14 @@ public class WebexServiceImpl implements WebexService {
     }
     
     @Override
-    public ResponseDTO<Boolean> notificarRegistrarOperador(OperadoresBean operadoresBean) {
+    public ResponseDTO<Integer> notificarRegistrarOperador(OperadoresBean operadoresBean) {
         webexTokenDao.registrarOperador(operadoresBean.getsLogin());
-        return Utilitario.getInstancia().responseOK(true);
+        return Utilitario.getInstancia().responseOK(operadoresBean.getnIdOperador());
+    }
+    
+    @Override
+    public List<OperadoresBean> listaCbxOperadores() {
+        return webexTokenDao.listaCbxOperadores();
     }
 
 }

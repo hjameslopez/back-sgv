@@ -278,20 +278,24 @@ public class WebexController {
             	objSalida = webexService.getOperador(sLogin);
             	if(objSalida == null) {
             		salida.put("mensaje", "Ingrese un usuario válido");
+            		salida.put("cod",333);
                     salida.put("operador",objSalida);
             	}
             	else {
             		salida.put("mensaje", "Verificado");
+            		salida.put("cod",222);
                     salida.put("operador",objSalida);
             	}
             } else {
                 salida.put("mensaje", "El operador: "+objSalida.getsNombre()+" ya se encuentra registrado");
+                salida.put("cod",111);
                 salida.put("operador",objSalida);
             }
         }catch (Exception e) {
             e.printStackTrace();
             logger.error("Error -> "+e);
             salida.put("mensaje", "No se pudo verificar el operador");
+            salida.put("cod", 444);
         }
         return ResponseEntity.ok(salida);
     }

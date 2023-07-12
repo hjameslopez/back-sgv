@@ -303,8 +303,9 @@ public class WebexController {
         return ResponseEntity.ok(salida);
     }
     
+    @ApiOperation(value = "Registra a un nuevo operador")
     @PostMapping(value = "/registrar-operador", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ResponseDTO<Boolean>> registrarOperador(@RequestBody OperadoresBean operadoresBean) {
+    public ResponseEntity<ResponseDTO<Integer>> registrarOperador(@RequestBody OperadoresBean operadoresBean) {
         try {
             if (operadoresBean == null) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -313,6 +314,13 @@ public class WebexController {
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+    
+    @GetMapping("/cbx-operadores")
+    @ResponseBody
+    public ResponseEntity<List<OperadoresBean>> listaCbxOperadores() {
+        List<OperadoresBean> lista = webexService.listaCbxOperadores();
+        return ResponseEntity.ok(lista);
     }
 
     

@@ -581,10 +581,18 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
 	
 	@Override
 	public void registrarOperador(String sLogin) {
-	    String query = "INSERT INTO SimVidOperador (sLogin) VALUES (?)";
+	    String query = "INSERT INTO SimVidOperador (sLogin, bLicAsignada) VALUES (?, 0)";
 	    jdbcTemplate.update(query, new Object[]{sLogin}, new int[]{Types.VARCHAR});
 	  }
 	
+    @Override
+    public List<OperadoresBean> listaCbxOperadores() {
+        String sql = "SELECT o.nIdOperador, o.sLogin, o.dFecCreado, o.bActivo, o.bLicAsignada, u.dFechaHoraAud, u.sNombre\r\n"
+        		+ "        		from SimVidOperador o LEFT JOIN SimUsuario u\r\n"
+        		+ "        		ON o.sLogin = u.sLogin\r\n"
+        		+ "        		WHERE o.bLicAsignada = 0";
+        return jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
+    }
 
 
 }

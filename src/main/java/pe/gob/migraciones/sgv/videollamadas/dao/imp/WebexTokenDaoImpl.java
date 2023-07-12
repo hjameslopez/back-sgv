@@ -5,6 +5,8 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
 import org.springframework.jdbc.core.SqlOutParameter;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
@@ -579,11 +581,18 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         return salida;
 	}
 	
+	
 	@Override
-	public void registrarOperador(String sLogin) {
+	public Integer registrarOperador(String sLogin) {
 	    String query = "INSERT INTO SimVidOperador (sLogin, bLicAsignada) VALUES (?, 0)";
-	    jdbcTemplate.update(query, new Object[]{sLogin}, new int[]{Types.VARCHAR});
-	  }
+	    PreparedStatementCreatorFactory pscFactory = new PreparedStatementCreatorFactory(query);
+	    pscFactory.setReturnGeneratedKeys(true);
+	    PreparedStatementCreator psc = pscFactory.newPreparedStatementCreator(new Object[]{sLogin});
+	    KeyHolder keyHolder = new GeneratedKeyHolder();
+	    jdbcTemplate.update(psc, keyHolder);
+	    int generatedKey = keyHolder.getKey().intValue();
+	    return generatedKey;
+	}
 	
     @Override
     public List<OperadoresBean> listaCbxOperadores() {

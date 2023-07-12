@@ -579,6 +579,12 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         return salida;
 	}
 	
+	@Override
+	public void registrarOperador(String sLogin) {
+	    String query = "INSERT INTO SimVidOperador (sLogin) VALUES (?)";
+	    jdbcTemplate.update(query, new Object[]{sLogin}, new int[]{Types.VARCHAR});
+	  }
+	
 
 
 }

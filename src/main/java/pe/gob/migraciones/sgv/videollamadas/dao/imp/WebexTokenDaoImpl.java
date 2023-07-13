@@ -441,7 +441,6 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         Object[] params = { operador, nIdSimVideCola };
         int[] types = { Types.VARCHAR, Types.VARCHAR};
         return jdbcTemplate.update(updateSql,params, types);
-
     }
 
 
@@ -611,6 +610,57 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         		+ "        		WHERE o.bLicAsignada = 0";
         return jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
     }
+    
+    @Override
+    public LicenciaBean updateLicencia(LicenciaBean licenciaBean) {
+        LicenciaBean salida = null;
+        String sql = "UPDATE SimVidLicencia\r\n"
+                + "SET sLogin = ?,\r\n"
+                + "    sContraseña = ?\r\n"
+                + "WHERE nIdLicencia = ?";
+        try {
+            // Ejecuta la consulta de actualización
+            int filasActualizadas = this.jdbcTemplate.update(sql, licenciaBean.getsLogin(), licenciaBean.getsContraseña(), licenciaBean.getnIdLicencia());
+
+            // Verifica si se actualizó al menos una fila
+            if (filasActualizadas > 0) {
+                // Consulta el objeto actualizado
+                String consultaObjeto = "SELECT * FROM SimVidLicencia WHERE nIdLicencia = ?";
+                salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{licenciaBean.getnIdLicencia()}, BeanPropertyRowMapper.newInstance(LicenciaBean.class));
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+        return salida;
+    }
+    
+    @Override
+    public OperadoresBean updateOperador(OperadoresBean operadoresBean) {
+    	OperadoresBean salida = null;
+        String sql = "UPDATE SimVidOperador\r\n"
+        		+ "				SET bActivo = ?,\r\n"
+        		+ "    			bLicAsignada = ?\r\n"
+        		+ "				WHERE nIdOperador = ?";
+        try {
+            // Ejecuta la consulta de actualización
+            int filasActualizadas = this.jdbcTemplate.update(sql, operadoresBean.getbActivo(), operadoresBean.getbLicAsignada(), operadoresBean.getnIdOperador());
+
+            // Verifica si se actualizó al menos una fila
+            if (filasActualizadas > 0) {
+                // Consulta el objeto actualizado
+                String consultaObjeto = "SELECT * FROM SimVidLicencia WHERE nIdLicencia = ?";
+                salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{operadoresBean.getnIdOperador()}, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+        return salida;
+    }
+
+
+
+    
+    
 
 
 }

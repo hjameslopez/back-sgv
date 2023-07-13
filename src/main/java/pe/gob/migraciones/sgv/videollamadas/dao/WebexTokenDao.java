@@ -51,4 +51,6 @@ public interface WebexTokenDao {
 	public OperadoresBean obtenerOperador(String sLogin);
 	public Integer registrarOperador(String sLogin);
 	public List<OperadoresBean> listaCbxOperadores();
+	public LicenciaBean updateLicencia(LicenciaBean licenciaBean);
+	public OperadoresBean updateOperador(OperadoresBean operadoresBean);
 }

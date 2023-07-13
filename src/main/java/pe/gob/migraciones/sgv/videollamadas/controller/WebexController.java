@@ -150,12 +150,11 @@ public class WebexController {
     }
     
     
-    @ApiOperation(value = "Terminar llamada OK")
+    @ApiOperation(value = "Terminar llamada")
     @PostMapping(value = "terminar-llamada", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, Object>> updateTerminarLlamada(@RequestBody WebexAtencionBean obj) throws Exception {
         Map<String, Object> salida = new HashMap<>();
         try {
-            //System.out.println("Objeto:----------"+obj.getsCodTicket());
             WebexAtencionBean objSalida = webexService.updateTerminarLlamada(obj);
             if (objSalida == null) {
                 salida.put("mensaje", "No se pudo terminar la llamada");
@@ -322,6 +321,55 @@ public class WebexController {
         List<OperadoresBean> lista = webexService.listaCbxOperadores();
         return ResponseEntity.ok(lista);
     }
+    
+    @ApiOperation(value = "Actualizar Licencia")
+    @PutMapping(value = "update-licencia", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ResponseDTO<LicenciaBean>> updateLicencia(@RequestBody LicenciaBean licenciaBean) {
+        ResponseDTO<LicenciaBean> salida = new ResponseDTO<>();
+        try {
+            ResponseDTO<LicenciaBean> objSalida = webexService.updateLicencia(licenciaBean);
+            if (objSalida.getData() == null) {
+                salida.setMensaje("No se actualizó");
+                salida.setCodigo("333");
+            } else {
+                salida.setMensaje("Ha sido actualizada la licencia: " + objSalida.getData().getsLicencia());
+                salida.setData(objSalida.getData());
+                salida.setCodigo("222");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("Error -> " + e);
+            salida.setMensaje("Error al actualizar la licencia");
+            salida.setCodigo("444");
+        }
+        return ResponseEntity.ok(salida);
+    }
+    
+    @ApiOperation(value = "Actualizar Operador")
+    @PutMapping(value = "update-operador", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ResponseDTO<OperadoresBean>> updateOperador(@RequestBody OperadoresBean operadoresBean) {
+        ResponseDTO<OperadoresBean> salida = new ResponseDTO<>();
+        try {
+            ResponseDTO<OperadoresBean> objSalida = webexService.updateOperador(operadoresBean);
+            if (objSalida.getData() == null) {
+                salida.setMensaje("No se actualizó");
+                salida.setCodigo("333");
+            } else {
+                salida.setMensaje("Ha sido actualizado el operador: " + objSalida.getData().getsNombre());
+                salida.setData(objSalida.getData());
+                salida.setCodigo("222");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("Error -> " + e);
+            salida.setMensaje("Error al actualizar operador");
+            salida.setCodigo("444");
+        }
+        return ResponseEntity.ok(salida);
+    }
+    
+    
+    
 
     
     

@@ -625,7 +625,11 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
             // Verifica si se actualizó al menos una fila
             if (filasActualizadas > 0) {
                 // Consulta el objeto actualizado
-                String consultaObjeto = "SELECT * FROM SimVidLicencia WHERE nIdLicencia = ?";
+                String consultaObjeto = "SELECT L.nIdLicencia, L.sLicencia, L.sLogin, L.sCorreo, L.sContraseña, L.dFechaHoraAud, L.bActivo, u.snombre \r\n"
+                		+ "        		FROM [dbo].[SimVidLicencia] l \r\n"
+                		+ "        		left join  simusuario u \r\n"
+                		+ "        		on l.SlOGIN = u.SLOGIN\r\n"
+                		+ "        		WHERE WHERE l.nIdLicencia = ?";
                 salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{licenciaBean.getnIdLicencia()}, BeanPropertyRowMapper.newInstance(LicenciaBean.class));
             }
         } catch (Exception e) {
@@ -648,7 +652,11 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
             // Verifica si se actualizó al menos una fila
             if (filasActualizadas > 0) {
                 // Consulta el objeto actualizado
-                String consultaObjeto = "SELECT * FROM SimVidLicencia WHERE nIdLicencia = ?";
+                String consultaObjeto = "SELECT o.nIdOperador, o.sLogin, o.dFecCreado, o.bActivo, u.snombre \r\n"
+                		+ "        		FROM [dbo].[SimVidOperador] o \r\n"
+                		+ "        		LEFT JOIN  simusuario u \r\n"
+                		+ "        		ON o.SlOGIN = u.SLOGIN\r\n"
+                		+ "        		WHERE WHERE o.nIdOperador = ?";
                 salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{operadoresBean.getnIdOperador()}, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
             }
         } catch (Exception e) {

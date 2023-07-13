@@ -576,5 +576,17 @@ public class WebexServiceImpl implements WebexService {
     public List<OperadoresBean> listaCbxOperadores() {
         return webexTokenDao.listaCbxOperadores();
     }
+    
+    @Override
+    public ResponseDTO<LicenciaBean> updateLicencia(LicenciaBean licenciaBean) {
+    	LicenciaBean objSalida = webexTokenDao.updateLicencia(licenciaBean);
+        return Utilitario.getInstancia().responseOK(objSalida);
+    }
+    
+    @Override
+    public ResponseDTO<OperadoresBean> updateOperador(OperadoresBean operadoresBean) {
+    	OperadoresBean objSalida = webexTokenDao.updateOperador(operadoresBean);
+        return Utilitario.getInstancia().responseOK(objSalida);
+    }
 
 }

@@ -50,6 +50,10 @@ public interface WebexService {
 	public ResponseDTO<Integer> notificarRegistrarOperador(OperadoresBean operadoresBean);
 	
 	public List<OperadoresBean> listaCbxOperadores();
+	
+	public ResponseDTO<LicenciaBean> updateLicencia(LicenciaBean licenciaBean);
+	
+	public ResponseDTO<OperadoresBean> updateOperador(OperadoresBean operadoresBean);
 
 	
 }

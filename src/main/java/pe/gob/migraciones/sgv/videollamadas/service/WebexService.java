@@ -1,6 +1,7 @@
 package pe.gob.migraciones.sgv.videollamadas.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.security.core.Authentication;
 
@@ -54,6 +55,8 @@ public interface WebexService {
 	public ResponseDTO<LicenciaBean> updateLicencia(LicenciaBean licenciaBean);
 	
 	public ResponseDTO<OperadoresBean> updateOperador(OperadoresBean operadoresBean);
+	
+	public ResponseDTO<LicenciaBean> updateOpeLicencia(LicenciaBean licenciaBean, Integer idOpeAntiguo, Integer idOpeNuevo);
 
 	
 }

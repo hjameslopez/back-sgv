@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import pe.gob.migraciones.sgv.videollamadas.bean.*;
@@ -588,5 +589,23 @@ public class WebexServiceImpl implements WebexService {
     	OperadoresBean objSalida = webexTokenDao.updateOperador(operadoresBean);
         return Utilitario.getInstancia().responseOK(objSalida);
     }
+    
+    @Override
+    @Transactional
+    public ResponseDTO<LicenciaBean> updateOpeLicencia(LicenciaBean licenciaBean, Integer idOpeAntiguo, Integer idOpeNuevo){
+    	LicenciaBean objSalida = null;
+    	objSalida = webexTokenDao.updateLicencia(licenciaBean);
+    	if(idOpeAntiguo==-1) {
+    		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
+    	}
+    	if(idOpeNuevo==-1) {
+    		webexTokenDao.actualizarLicAsignada(idOpeAntiguo);
+    	}
+    	if(idOpeAntiguo != -1 && idOpeNuevo !=-1) {
+    		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
+    		webexTokenDao.actualizarLicAsignada(idOpeAntiguo);
+    	}
+    	return Utilitario.getInstancia().responseOK(objSalida);
+    }    
 
 }

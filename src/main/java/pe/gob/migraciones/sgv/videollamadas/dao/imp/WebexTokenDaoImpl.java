@@ -611,6 +611,7 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         return jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(OperadoresBean.class));
     }
     
+    //Actualizar solo la licencia
     @Override
     public LicenciaBean updateLicencia(LicenciaBean licenciaBean) {
         LicenciaBean salida = null;
@@ -638,6 +639,7 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         return salida;
     }
     
+  //Actualizar solo el operador
     @Override
     public OperadoresBean updateOperador(OperadoresBean operadoresBean) {
     	OperadoresBean salida = null;
@@ -664,6 +666,15 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
         }
         return salida;
     }
+    
+
+    @Override
+    public void actualizarLicAsignada(int idOperador) {
+    	String sql = "UPDATE SimVidOperador SET bLicAsignada = 1 - bLicAsignada WHERE nIdOperador = ?";
+    	jdbcTemplate.update(sql, idOperador);
+    	}
+    
+
 
 
 

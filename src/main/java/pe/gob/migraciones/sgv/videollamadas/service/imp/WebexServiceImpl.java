@@ -17,6 +17,7 @@ import pe.gob.migraciones.sgv.videollamadas.dao.LicenciaDao;
 import pe.gob.migraciones.sgv.videollamadas.dao.OperadorDao;
 import pe.gob.migraciones.sgv.videollamadas.dao.WebexTokenDao;
 import pe.gob.migraciones.sgv.videollamadas.dao.WebexTokenDaoCron;
+import pe.gob.migraciones.sgv.videollamadas.dto.LicenciaBeanDTO;
 import pe.gob.migraciones.sgv.videollamadas.dto.ResponseDTO;
 import pe.gob.migraciones.sgv.videollamadas.dto.WebexColaResponseDTO;
 import pe.gob.migraciones.sgv.videollamadas.dto.WebexGuestResponseDTO;
@@ -578,13 +579,13 @@ public class WebexServiceImpl implements WebexService {
     public List<OperadoresBean> listaCbxOperadores() {
         return webexTokenDao.listaCbxOperadores();
     }
-    
+    /*
     @Override
     public ResponseDTO<LicenciaBean> updateLicencia(LicenciaBean licenciaBean) {
     	LicenciaBean objSalida = webexTokenDao.updateLicencia(licenciaBean);
         return Utilitario.getInstancia().responseOK(objSalida);
     }
-    
+    */
     @Override
     public ResponseDTO<OperadoresBean> updateOperador(OperadoresBean operadoresBean) {
     	OperadoresBean objSalida = webexTokenDao.updateOperador(operadoresBean);
@@ -593,9 +594,11 @@ public class WebexServiceImpl implements WebexService {
     
     @Override
     @Transactional
-    public ResponseDTO<LicenciaBean> updateOpeLicencia(LicenciaBean licenciaBean, Integer idOpeAntiguo, Integer idOpeNuevo){
-    	LicenciaBean objSalida = null;
-    	objSalida = webexTokenDao.updateLicencia(licenciaBean);
+    public ResponseDTO<LicenciaBeanDTO> updateOpeLicencia(LicenciaBeanDTO licenciaBeanDTO){
+    	Integer idOpeAntiguo  = licenciaBeanDTO.getIdOpeAntiguo();
+    	Integer idOpeNuevo = licenciaBeanDTO.getIdOpeNuevo();
+    	LicenciaBeanDTO objSalida = null;
+    	objSalida = webexTokenDao.updateLicencia(licenciaBeanDTO);
     	if(idOpeAntiguo==-1) {
     		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
     	}

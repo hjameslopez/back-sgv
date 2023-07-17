@@ -9,6 +9,7 @@ import pe.gob.migraciones.sgv.videollamadas.bean.LicenciaBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.OperadoresBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexAtencionBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexSimVideColaBean;
+import pe.gob.migraciones.sgv.videollamadas.dto.LicenciaBeanDTO;
 import pe.gob.migraciones.sgv.videollamadas.dto.ResponseDTO;
 import pe.gob.migraciones.sgv.videollamadas.dto.WebexGuestResponseDTO;
 import pe.gob.migraciones.sgv.videollamadas.dto.WebexOperadorResponseDTO;
@@ -52,11 +53,11 @@ public interface WebexService {
 	
 	public List<OperadoresBean> listaCbxOperadores();
 	
-	public ResponseDTO<LicenciaBean> updateLicencia(LicenciaBean licenciaBean);
+	//public ResponseDTO<LicenciaBean> updateLicencia(LicenciaBean licenciaBean);
 	
 	public ResponseDTO<OperadoresBean> updateOperador(OperadoresBean operadoresBean);
 	
-	public ResponseDTO<LicenciaBean> updateOpeLicencia(LicenciaBean licenciaBean, Integer idOpeAntiguo, Integer idOpeNuevo);
+	public ResponseDTO<LicenciaBeanDTO> updateOpeLicencia(LicenciaBeanDTO licenciaBeanDTO);
 
 	
 }

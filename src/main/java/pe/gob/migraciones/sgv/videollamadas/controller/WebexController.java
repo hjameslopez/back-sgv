@@ -127,10 +127,10 @@ public class WebexController {
 
     @ApiOperation(value = "Operador Asignado")
     @PostMapping(value = "asigna-operador", produces = MediaType.APPLICATION_JSON_VALUE)
-    public synchronized ResponseEntity<Map<String, Object>> updateAsignarOperador(@RequestBody WebexAtencionBean obj) throws Exception {
+    public synchronized ResponseEntity<Map<String, Object>> updateAsignarOperador(@RequestBody WebexAtencionBean obj, Authentication authentication) throws Exception {
         Map<String, Object> salida = new HashMap<>();
             try {
-                WebexAtencionBean objSalida = webexService.updateAsignarOperador(obj);
+                WebexAtencionBean objSalida = webexService.updateAsignarOperador(obj, authentication);
                 if (objSalida == null) {
                     salida.put("mensaje", Constantes.MENSAJE_ACT_ERROR);
                 } else {
@@ -307,8 +307,10 @@ public class WebexController {
         try {
             if (operadoresBean == null) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+                
             }
             return new ResponseEntity<>(webexService.notificarRegistrarOperador(operadoresBean), HttpStatus.OK);
+            
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -317,9 +319,12 @@ public class WebexController {
     @GetMapping("/cbx-operadores")
     @ResponseBody
     public ResponseEntity<List<OperadoresBean>> listaCbxOperadores() {
+    	
         List<OperadoresBean> lista = webexService.listaCbxOperadores();
+        
         return ResponseEntity.ok(lista);
     }
+    
     //Actualizar solo la licencia
     @ApiOperation(value = "Actualizar Licencia")
     @PutMapping(value = "update-licencia", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -343,6 +348,7 @@ public class WebexController {
         }
         return ResponseEntity.ok(salida);
     }
+    
     //Actuualizar solo el operador
     @ApiOperation(value = "Actualizar Operador")
     @PutMapping(value = "update-operador", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -394,3 +400,4 @@ public class WebexController {
     }
     
 }
+

@@ -332,14 +332,15 @@ public class WebexServiceImpl implements WebexService {
 
     }
     @Override
-    public WebexAtencionBean updateAsignarOperador(WebexAtencionBean webex) throws Exception {
-
+    public WebexAtencionBean updateAsignarOperador(WebexAtencionBean webex, Authentication authentication) throws Exception {
+    	UserDetailsCustom user = (UserDetailsCustom) authentication.getPrincipal();
+        OperadorBean operadorBean = operadorDao.getOperador(user.getSesionVo().getnIdOperador());
     	String correo = webex.getsLicenciaAsignar();
         
         WebexAtencionBean objSalida = null;
         // valida si no tiene operador asignado => se puede actualizar
         if (webex.getsOpeAsignado() == null) {
-        	objSalida = webexTokenDao.asignaOperador(correo, webex.getnIdSimVideCola());
+        	objSalida = webexTokenDao.asignaOperador(correo, webex.getnIdSimVideCola(), operadorBean.getsLogin());
         } else {
         	objSalida = webexTokenDao.buscaAtencionTicket(webex.getnIdSimVideCola());
         }

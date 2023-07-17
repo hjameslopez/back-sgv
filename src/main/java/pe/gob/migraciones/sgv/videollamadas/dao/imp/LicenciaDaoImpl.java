@@ -30,7 +30,12 @@ public class LicenciaDaoImpl implements LicenciaDao {
     @Override
     public List<LicenciaBean> listLicencias() {
         //Ordenado por licencia 1-24
-        String sql = "SELECT L.nIdLicencia, L.sLicencia, L.sLogin, L.sCorreo, L.sContraseña, L.dFechaHoraAud, L.bActivo, u.snombre FROM [dbo].[SimVidLicencia] l left join  simusuario u on l.SlOGIN = u.SLOGIN";
+        String sql = "SELECT L.nIdLicencia, L.sLicencia, L.sLogin, L.sCorreo, L.sContraseña, L.dFechaHoraAud, L.bActivo, u.snombre, o.nIdOperador\r\n"
+        		+ "				FROM [dbo].[SimVidLicencia] l \r\n"
+        		+ "				LEFT JOIN  simusuario u \r\n"
+        		+ "				ON l.SlOGIN = u.SLOGIN\r\n"
+        		+ "				LEFT JOIN SimVidOperador o\r\n"
+        		+ "				ON l.sLogin = o.sLogin";
 
         //Ordenado alfabeticamente
         //String sql = "SELECT L.* , u.snombre FROM [dbo].[SimVidLicencia] l left join  simusuario u on l.SlOGIN = u.SLOGIN order by u.snombre ASC";

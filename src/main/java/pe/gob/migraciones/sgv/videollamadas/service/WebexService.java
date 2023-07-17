@@ -22,7 +22,7 @@ public interface WebexService {
 
     public Integer validaOperador(Integer nIdSimVideCola, Authentication authentication) throws Exception;
 
-    WebexAtencionBean updateAsignarOperador(WebexAtencionBean webexAtencionBean) throws Exception;
+    WebexAtencionBean updateAsignarOperador(WebexAtencionBean webexAtencionBean, Authentication authentication) throws Exception;
 
     WebexAtencionBean updateTerminarLlamada(WebexAtencionBean webexAtencionBean) throws Exception;
 

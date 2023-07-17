@@ -45,7 +45,7 @@ public interface WebexTokenDao {
     public WebexSimVideColaBean validaOperador(Integer nIdSimVideCola);
     //public String PrimerSegundoDelDia();
     //public String UltimoSegundoDelDia();
-    public WebexAtencionBean asignaOperador(String correo, Integer nIdSimVideCola) throws SQLException;
+    public WebexAtencionBean asignaOperador(String correo, Integer nIdSimVideCola, String sLogin) throws SQLException;
     public String obtenerLicencia(Integer nIdOperador);
 	public LicenciaBean licenciaAsignada(Integer idUsuario);
 	public OperadoresBean obtenerOperador(String sLogin);

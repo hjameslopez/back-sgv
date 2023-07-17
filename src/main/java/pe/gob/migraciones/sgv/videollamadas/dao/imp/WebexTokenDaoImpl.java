@@ -475,7 +475,7 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
     @Override
     public List<WebexSimVideColaBean> getColaFiltros(String sOpeAsignado, String fechaInicial, String fechaFinal) {
         List<WebexSimVideColaBean> lista;
-        String sql = "Select top 1000 c.nIdSimVideCola, c.sNombres, c.sCodTicket, c.sOpeAsignado, c.nEstado, c.nIdSesion, c.dFecCreado, p.dFechaNacimiento as nEdad "
+        String sql = "Select top 2000 c.nIdSimVideCola, c.sNombres, c.sCodTicket, c.sOpeAsignado, c.nEstado, c.nIdSesion, c.dFecCreado, p.dFechaNacimiento as nEdad "
         		+ "from SIM.dbo.SimVideCola c "
         		+ "inner join sim.dbo.simpersona p "
         		+ "on c.sIdPersona = p.uIdPersona "
@@ -503,19 +503,21 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
     }
   */  
     @Override
-    public WebexAtencionBean asignaOperador(String sCorreo, Integer nIdSimVideCola) throws SQLException {
+    public WebexAtencionBean asignaOperador(String sCorreo, Integer nIdSimVideCola, String sLogin) throws SQLException {
 
           SimpleJdbcCall proc = new SimpleJdbcCall(jdbcTemplate)
                        .withSchemaName("dbo")
-                        .withProcedureName("usp_Sim_Sgv_AsignarOperador")
+                       .withProcedureName("usp_Sim_Sgv_AsignarOperador")
                        .declareParameters(
                                     new SqlParameter("sCorreo", Types.CHAR),
-                       				new SqlParameter("nIdSimVideCola", Types.CHAR))
+                       				new SqlParameter("nIdSimVideCola", Types.CHAR),
+                       				new SqlParameter("sLogin", Types.CHAR))
                        .returningResultSet("result", BeanPropertyRowMapper.newInstance(WebexAtencionBean.class));
 
           SqlParameterSource in = new MapSqlParameterSource()
-                       .addValue("sCorreo", sCorreo)
-                       .addValue("nIdSimVideCola", nIdSimVideCola);
+        		  .addValue("sCorreo", sCorreo)
+        		  .addValue("nIdSimVideCola", nIdSimVideCola)
+        		  .addValue("sLogin", sLogin);
 
           Map<String, Object> mapOut = proc.execute(in);
           Object data = mapOut.get("result");
@@ -672,7 +674,7 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
     public void actualizarLicAsignada(int idOperador) {
     	String sql = "UPDATE SimVidOperador SET bLicAsignada = 1 - bLicAsignada WHERE nIdOperador = ?";
     	jdbcTemplate.update(sql, idOperador);
-    	}
+    }
     
 
 

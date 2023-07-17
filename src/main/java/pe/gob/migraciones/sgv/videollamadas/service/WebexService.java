@@ -57,7 +57,7 @@ public interface WebexService {
 	
 	public ResponseDTO<OperadoresBean> updateOperador(OperadoresBean operadoresBean);
 	
-	public ResponseDTO<LicenciaBeanDTO> updateOpeLicencia(LicenciaBeanDTO licenciaBeanDTO);
+	public ResponseDTO<LicenciaBean> updateOpeLicencia(LicenciaBeanDTO licenciaBeanDTO);
 
 	
 }

@@ -616,8 +616,8 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
     
     //Actualizar solo la licencia
     @Override
-    public LicenciaBeanDTO updateLicencia(LicenciaBeanDTO licenciaBeanDTO) {
-    	LicenciaBeanDTO salida = null;
+    public LicenciaBean updateLicencia(LicenciaBeanDTO licenciaBeanDTO) {
+    	LicenciaBean salida = null;
         String sql = "UPDATE SimVidLicencia\r\n"
                 + "SET sLogin = ?,\r\n"
                 + "    sContraseña = ?\r\n"
@@ -629,12 +629,14 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
             // Verifica si se actualizó al menos una fila
             if (filasActualizadas > 0) {
                 // Consulta el objeto actualizado
-                String consultaObjeto = "SELECT L.nIdLicencia, L.sLicencia, L.sLogin, L.sCorreo, L.sContraseña, L.dFechaHoraAud, L.bActivo, u.snombre \r\n"
-                		+ "        		FROM [dbo].[SimVidLicencia] l \r\n"
-                		+ "        		left join  simusuario u \r\n"
-                		+ "        		on l.SlOGIN = u.SLOGIN\r\n"
-                		+ "        		WHERE WHERE l.nIdLicencia = ?";
-                salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{licenciaBeanDTO.getnIdLicencia()}, BeanPropertyRowMapper.newInstance(LicenciaBeanDTO.class));
+                String consultaObjeto = "SELECT L.nIdLicencia, L.sLicencia, L.sLogin, L.sCorreo, L.sContraseña, L.dFechaHoraAud, L.bActivo, u.snombre, o.nIdOperador\r\n"
+                		+ "			FROM [dbo].[SimVidLicencia] l\r\n"
+                		+ "			left join  simusuario u\r\n"
+                		+ "			on l.SlOGIN = u.SLOGIN\r\n"
+                		+ "			LEFT JOIN SimVidOperador o\r\n"
+                		+ "			ON l.sLogin = o.sLogin\r\n"
+                		+ "			WHERE l.nIdLicencia = ?";
+                salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{licenciaBeanDTO.getnIdLicencia()}, BeanPropertyRowMapper.newInstance(LicenciaBean.class));
             }
         } catch (Exception e) {
             System.out.print(e.getMessage());

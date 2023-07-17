@@ -28,6 +28,7 @@ import pe.gob.migraciones.sgv.videollamadas.bean.WebexMensajeInicialBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexSimVideColaBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexTokenBean;
 import pe.gob.migraciones.sgv.videollamadas.dao.WebexTokenDao;
+import pe.gob.migraciones.sgv.videollamadas.dto.LicenciaBeanDTO;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -615,15 +616,15 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
     
     //Actualizar solo la licencia
     @Override
-    public LicenciaBean updateLicencia(LicenciaBean licenciaBean) {
-        LicenciaBean salida = null;
+    public LicenciaBeanDTO updateLicencia(LicenciaBeanDTO licenciaBeanDTO) {
+    	LicenciaBeanDTO salida = null;
         String sql = "UPDATE SimVidLicencia\r\n"
                 + "SET sLogin = ?,\r\n"
                 + "    sContraseña = ?\r\n"
                 + "WHERE nIdLicencia = ?";
         try {
             // Ejecuta la consulta de actualización
-            int filasActualizadas = this.jdbcTemplate.update(sql, licenciaBean.getsLogin(), licenciaBean.getsContraseña(), licenciaBean.getnIdLicencia());
+            int filasActualizadas = this.jdbcTemplate.update(sql, licenciaBeanDTO.getsLogin(), licenciaBeanDTO.getsContraseña(), licenciaBeanDTO.getnIdLicencia());
 
             // Verifica si se actualizó al menos una fila
             if (filasActualizadas > 0) {
@@ -633,7 +634,7 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
                 		+ "        		left join  simusuario u \r\n"
                 		+ "        		on l.SlOGIN = u.SLOGIN\r\n"
                 		+ "        		WHERE WHERE l.nIdLicencia = ?";
-                salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{licenciaBean.getnIdLicencia()}, BeanPropertyRowMapper.newInstance(LicenciaBean.class));
+                salida = this.jdbcTemplate.queryForObject(consultaObjeto, new Object[]{licenciaBeanDTO.getnIdLicencia()}, BeanPropertyRowMapper.newInstance(LicenciaBeanDTO.class));
             }
         } catch (Exception e) {
             System.out.print(e.getMessage());

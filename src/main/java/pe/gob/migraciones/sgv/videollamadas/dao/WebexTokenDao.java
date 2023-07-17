@@ -12,6 +12,7 @@ import pe.gob.migraciones.sgv.videollamadas.bean.WebexListaNegraBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexMensajeInicialBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexSimVideColaBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexTokenBean;
+import pe.gob.migraciones.sgv.videollamadas.dto.LicenciaBeanDTO;
 
 public interface WebexTokenDao {
     List<WebexTokenBean> findToken(String docidentidad);
@@ -51,7 +52,7 @@ public interface WebexTokenDao {
 	public OperadoresBean obtenerOperador(String sLogin);
 	public Integer registrarOperador(String sLogin);
 	public List<OperadoresBean> listaCbxOperadores();
-	public LicenciaBean updateLicencia(LicenciaBean licenciaBean);
+	public LicenciaBeanDTO updateLicencia(LicenciaBeanDTO licenciaBeanDTO);
 	public OperadoresBean updateOperador(OperadoresBean operadoresBean);
 	public void actualizarLicAsignada(int idOperador);
 }

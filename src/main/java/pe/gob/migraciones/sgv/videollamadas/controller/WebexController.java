@@ -17,6 +17,7 @@ import pe.gob.migraciones.sgv.videollamadas.bean.LicenciaBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.OperadoresBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexAtencionBean;
 import pe.gob.migraciones.sgv.videollamadas.bean.WebexSimVideColaBean;
+import pe.gob.migraciones.sgv.videollamadas.dto.LicenciaBeanDTO;
 import pe.gob.migraciones.sgv.videollamadas.dto.ResponseDTO;
 import pe.gob.migraciones.sgv.videollamadas.service.WebexService;
 
@@ -324,7 +325,7 @@ public class WebexController {
         
         return ResponseEntity.ok(lista);
     }
-    
+    /*
     //Actualizar solo la licencia
     @ApiOperation(value = "Actualizar Licencia")
     @PutMapping(value = "update-licencia", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -348,7 +349,7 @@ public class WebexController {
         }
         return ResponseEntity.ok(salida);
     }
-    
+    */
     //Actuualizar solo el operador
     @ApiOperation(value = "Actualizar Operador")
     @PutMapping(value = "update-operador", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -375,13 +376,11 @@ public class WebexController {
     
         
     @ApiOperation(value = "Actualiza la licencia, el operador nuevo y antiguo")
-    @GetMapping(value = "update-lic-ope", produces = MediaType.APPLICATION_JSON_VALUE)
-    public  ResponseEntity<ResponseDTO<LicenciaBean>> updateOpeLicencia(@RequestBody LicenciaBean licenciaBean, 
-    																@RequestParam(name = "idOpeAntiguo") Integer idOpeAntiguo, 
-    																@RequestParam(name = "idOpeNuevo") Integer idOpeNuevo) {
-    	ResponseDTO<LicenciaBean> salida = new ResponseDTO<>();
+    @PostMapping(value = "update-lic-ope", produces = MediaType.APPLICATION_JSON_VALUE)
+    public  ResponseEntity<ResponseDTO<LicenciaBeanDTO>> updateOpeLicencia(@RequestBody LicenciaBeanDTO licenciaBean) {    	
+    	ResponseDTO<LicenciaBeanDTO> salida = new ResponseDTO<>();
         try {
-        	ResponseDTO<LicenciaBean> objSalida = webexService.updateOpeLicencia(licenciaBean, idOpeAntiguo, idOpeNuevo);
+        	ResponseDTO<LicenciaBeanDTO> objSalida = webexService.updateOpeLicencia(licenciaBean);
             if (objSalida != null) {
             	salida.setMensaje("Actualizó Correctamente");
                 salida.setCodigo("222");
@@ -397,7 +396,6 @@ public class WebexController {
             salida.setCodigo("444");
         }
         return ResponseEntity.ok(salida);
-    }
-    
+    }  
 }
 

@@ -594,10 +594,10 @@ public class WebexServiceImpl implements WebexService {
     
     @Override
     @Transactional
-    public ResponseDTO<LicenciaBeanDTO> updateOpeLicencia(LicenciaBeanDTO licenciaBeanDTO){
+    public ResponseDTO<LicenciaBean> updateOpeLicencia(LicenciaBeanDTO licenciaBeanDTO){
     	Integer idOpeAntiguo  = licenciaBeanDTO.getIdOpeAntiguo();
     	Integer idOpeNuevo = licenciaBeanDTO.getIdOpeNuevo();
-    	LicenciaBeanDTO objSalida = null;
+    	LicenciaBean objSalida = null;
     	objSalida = webexTokenDao.updateLicencia(licenciaBeanDTO);
     	if(idOpeAntiguo==-1) {
     		webexTokenDao.actualizarLicAsignada(idOpeNuevo);

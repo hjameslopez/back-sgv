@@ -599,7 +599,7 @@ public class WebexServiceImpl implements WebexService {
     	Integer idOpeNuevo = licenciaBeanDTO.getIdOpeNuevo();
     	LicenciaBean objSalida = null;
     	objSalida = webexTokenDao.updateLicencia(licenciaBeanDTO);
-    	if(idOpeAntiguo != null && idOpeNuevo != null) {
+    	if(idOpeAntiguo != licenciaBeanDTO.getnIdOperador()) {
     		if(idOpeAntiguo==-1) {
         		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
         	}

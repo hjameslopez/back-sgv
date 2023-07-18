@@ -18,7 +18,7 @@ public class WebexSimVideColaBean {
     private Integer nIdSesion;
     private String nEdad;
     private String nombreOperador;
-    
+    private String sNombre;
     
 	public Integer getnIdSimVideCola() {
 		return nIdSimVideCola;
@@ -110,9 +110,40 @@ public class WebexSimVideColaBean {
 	public void setNombreOperador(String nombreOperador) {
 		this.nombreOperador = nombreOperador;
 	}
-
-
+	public String getsNombre() {
+		return sNombre;
+	}
+	public void setsNombre(String sNombre) {
+		this.sNombre = sNombre;
+	}
+	
+	public WebexSimVideColaBean() {
+		super();
+	}
+	
+	public WebexSimVideColaBean(Integer nIdSimVideCola, String sIdPersona, String sNombres, String sTipTicket,
+			String sCodTicket, LocalDateTime dFecCita, String sOpeAsignado, Integer nEstado, LocalDateTime dFecCreado,
+			LocalDateTime dFecEnTurno, LocalDateTime dFecLlamada, LocalDateTime dFecHoraAud, Integer nIdSesion,
+			String nEdad, String nombreOperador, String sNombre) {
+		super();
+		this.nIdSimVideCola = nIdSimVideCola;
+		this.sIdPersona = sIdPersona;
+		this.sNombres = sNombres;
+		this.sTipTicket = sTipTicket;
+		this.sCodTicket = sCodTicket;
+		this.dFecCita = dFecCita;
+		this.sOpeAsignado = sOpeAsignado;
+		this.nEstado = nEstado;
+		this.dFecCreado = dFecCreado;
+		this.dFecEnTurno = dFecEnTurno;
+		this.dFecLlamada = dFecLlamada;
+		this.dFecHoraAud = dFecHoraAud;
+		this.nIdSesion = nIdSesion;
+		this.nEdad = nEdad;
+		this.nombreOperador = nombreOperador;
+		this.sNombre = sNombre;
+	}
     
-
+    
 
 }

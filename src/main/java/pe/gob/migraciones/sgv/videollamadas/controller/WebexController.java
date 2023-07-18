@@ -377,10 +377,10 @@ public class WebexController {
         
     @ApiOperation(value = "Actualiza la licencia, el operador nuevo y antiguo")
     @PostMapping(value = "update-lic-ope", produces = MediaType.APPLICATION_JSON_VALUE)
-    public  ResponseEntity<ResponseDTO<LicenciaBean>> updateOpeLicencia(@RequestBody LicenciaBeanDTO licenciaBean) {    	
+    public  ResponseEntity<ResponseDTO<LicenciaBean>> updateOpeLicencia(@RequestBody LicenciaBeanDTO licenciaBeanDTO) {    	
     	ResponseDTO<LicenciaBean> salida = new ResponseDTO<>();
         try {
-        	ResponseDTO<LicenciaBean> objSalida = webexService.updateOpeLicencia(licenciaBean);
+        	ResponseDTO<LicenciaBean> objSalida = webexService.updateOpeLicencia(licenciaBeanDTO);
             if (objSalida != null) {
             	salida.setMensaje("Actualizó Correctamente");
                 salida.setCodigo("222");

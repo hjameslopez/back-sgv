@@ -599,15 +599,17 @@ public class WebexServiceImpl implements WebexService {
     	Integer idOpeNuevo = licenciaBeanDTO.getIdOpeNuevo();
     	LicenciaBean objSalida = null;
     	objSalida = webexTokenDao.updateLicencia(licenciaBeanDTO);
-    	if(idOpeAntiguo==-1) {
-    		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
-    	}
-    	if(idOpeNuevo==-1) {
-    		webexTokenDao.actualizarLicAsignada(idOpeAntiguo);
-    	}
-    	if(idOpeAntiguo != -1 && idOpeNuevo !=-1) {
-    		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
-    		webexTokenDao.actualizarLicAsignada(idOpeAntiguo);
+    	if(idOpeAntiguo != null && idOpeNuevo != null) {
+    		if(idOpeAntiguo==-1) {
+        		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
+        	}
+        	if(idOpeNuevo==-1) {
+        		webexTokenDao.actualizarLicAsignada(idOpeAntiguo);
+        	}
+        	if(idOpeAntiguo != -1 && idOpeNuevo !=-1) {
+        		webexTokenDao.actualizarLicAsignada(idOpeNuevo);
+        		webexTokenDao.actualizarLicAsignada(idOpeAntiguo);
+        	}
     	}
     	return Utilitario.getInstancia().responseOK(objSalida);
     }    

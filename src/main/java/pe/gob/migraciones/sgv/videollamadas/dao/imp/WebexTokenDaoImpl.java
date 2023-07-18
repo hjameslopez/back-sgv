@@ -476,15 +476,20 @@ public class WebexTokenDaoImpl implements WebexTokenDao {
     @Override
     public List<WebexSimVideColaBean> getColaFiltros(String sOpeAsignado, String fechaInicial, String fechaFinal) {
         List<WebexSimVideColaBean> lista;
-        String sql = "Select top 2000 c.nIdSimVideCola, c.sNombres, c.sCodTicket, c.sOpeAsignado, c.nEstado, c.nIdSesion, c.dFecCreado, p.dFechaNacimiento as nEdad "
-        		+ "from SIM.dbo.SimVideCola c "
-        		+ "inner join sim.dbo.simpersona p "
-        		+ "on c.sIdPersona = p.uIdPersona "
-        		+ "where c.bActivo = '1' and p.uIdPersona <> '00000000-0000-0000-0000-000000000000' "
-        		+ "and c.sOpeAsignado = ? "
-        		+ "and CONVERT(VARCHAR(10), c.dFecCreado, 23) >= ? "
-        		+ "and CONVERT(VARCHAR(10), c.dFecCreado, 23) <= ? "
-        		+ "ORDER BY c.nIdSimVideCola DESC";
+        String sql = "SELECT TOP 2000 c.nIdSimVideCola, c.sNombres, c.sCodTicket, c.sOpeAsignado, c.nEstado, c.nIdSesion, c.dFecCreado, p.dFechaNacimiento as nEdad, su.sNombre\r\n"
+        		+ "      FROM SIM.dbo.SimVideCola c\r\n"
+        		+ "      INNER JOIN sim.dbo.simpersona p\r\n"
+        		+ "      ON c.sIdPersona = p.uIdPersona\r\n"
+        		+ "      LEFT JOIN SimVidLicencia svl\r\n"
+        		+ "      ON c.sOpeAsignado = svl.sCorreo\r\n"
+        		+ "      LEFT JOIN SimUsuario su\r\n"
+        		+ "      ON svl.sLogin = su.sLogin\r\n"
+        		+ "      WHERE c.bActivo = '1' AND p.uIdPersona <> '00000000-0000-0000-0000-000000000000'\r\n"
+        		+ "      ORDER BY c.nIdSimVideCola DESC\r\n"
+        		+ "      AND c.sOpeAsignado = ?\r\n"
+        		+ "      AND CONVERT(VARCHAR(10), c.dFecCreado, 23) >= ?\r\n"
+        		+ "      AND CONVERT(VARCHAR(10), c.dFecCreado, 23) <= ?\r\n"
+        		+ "      ORDER BY c.nIdSimVideCola DESC";
         lista = jdbcTemplate.query(sql, new Object[] { sOpeAsignado, fechaInicial, fechaFinal },
                 BeanPropertyRowMapper.newInstance(WebexSimVideColaBean.class));
 
